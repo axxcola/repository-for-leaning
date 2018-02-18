@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html ng-app="hd">
+<head>
+	<meta charset="utf-8">
+	<title>3</title>
+	<script type="text/javascript" src="angular-1.3.0.js"></script>
+</head>
+<body>
+<div ng-controller="ctrl">
+	{{name}}
+</div>
+<script type="text/javascript">
+	var m = angular.module('hd', []);	//hd模块。后面的是依赖的模块，无依赖模块就留空
+	m.controller('ctrl', ['$scope', function($scope) {
+	//ctrl是view中控制器的名字，中括号第一个scope是依赖注入,第二个形参$scope可以自定义
+	//这种不省略前面scope的写法可以自定义参数名，如果省略就是能用$scope作为形参
+		$scope.name = '测试angular';
+	}]);
+</script>
+</body>
+</html>
