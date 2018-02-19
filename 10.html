@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>10</title>
+	<script type="text/javascript" src="angular-1.3.0.js"></script>
+</head>
+<body>
+<div ng-app="hd" ng-controller="ctrl">
+	Game: <input type="checkbox" ng-model="data.game" ng-true-value='1' ng-false-value='0'>
+	Movie: <input type="checkbox" ng-model="data.movie" ng-true-value='1' ng-false-value='0'>
+	{{data}}
+	<br />
+	<div ng-show="data.game==1"><h1>游戏</h1><textarea col='30' row='10'></textarea></div>
+	<div ng-show="data.movie==1"><h1>电影</h1><textarea col='30' row='10'></textarea></div>
+</div>
+<script type="text/javascript">
+	var m = angular.module('hd', []);
+	m.controller("ctrl", ['$scope', function($scope) {
+		$scope.data={game:0, movie:0}
+	}]);
+</script>
+</body>
+</html>

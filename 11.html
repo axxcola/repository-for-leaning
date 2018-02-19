@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>11</title>
+	<script type="text/javascript" src="angular.min.js"></script>
+</head>
+<body>
+<div ng-app="hd" ng-controller="ctrl">
+	<select ng-options="v.value as v.name for v in data" ng-model="city">
+		<!-- <option value="v.value">v.name</option> -->
+	</select>
+	{{city}}
+</div>
+<script type="text/javascript">
+	var m = angular.module('hd', []);
+	m.controller("ctrl", ['$scope', function($scope) {
+		console.log(angular.version);
+		$scope.data=[
+			{name: 'Gexy', value: 'Cool'},
+			{name: '北京', value: 'beijing'},
+			{name: '上海', value: 'Shanghai'}
+		];
+	}]);
+</script>
+</body>
+</html>

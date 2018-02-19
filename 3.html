@@ -8,6 +8,17 @@
 <body>
 <div ng-controller="ctrl">
 	{{name}}
+	<br />
+	<button ng-click="test()">???</button>
+	<br />
+	{{goods.title}}
+	{{goods.price}}
+	{{goods.num}}
+	<br />
+	total:{{goods.price*goods.num}}￥
+	<br />
+	<button ng-click="add()">Add</button>
+	<button ng-click="reduce()">Reduce</button>
 </div>
 <script type="text/javascript">
 	var m = angular.module('hd', []);	//hd模块。后面的是依赖的模块，无依赖模块就留空
@@ -15,6 +26,16 @@
 	//ctrl是view中控制器的名字，中括号第一个scope是依赖注入,第二个形参$scope可以自定义
 	//这种不省略前面scope的写法可以自定义参数名，如果省略就是能用$scope作为形参
 		$scope.name = '测试angular';
+		$scope.goods = {'title':'iMac', 'price':3000, 'num':0};
+		$scope.test = function() {
+			alert(123);
+		};
+		$scope.add = function() {
+			$scope.goods.num++;
+		};
+		$scope.reduce = function() {
+			$scope.goods.num = Math.max(--$scope.goods.num, 0);
+		};
 	}]);
 </script>
 </body>
