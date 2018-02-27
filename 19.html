@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>19</title>
+	<script type="text/javascript" src="angular.min.js"></script>
+	<script type="text/javascript" src="jquery-3.3.1.min.js"></script>
+</head>
+<body>
+<div ng-app="hd" ng-controller="ctrl">
+	性别：
+	<select ng-model="user.sex" name="" id="">
+		<option ng-selected="user.sex==1" value="" ng-value="1">男</option>
+		<option ng-selected="user.sex==2" value="" ng-value="2">女</option>
+	</select>
+	<input type="radio" ng-model="user.sex" ng-value="1">男
+	<input type="radio" ng-model="user.sex" ng-value="2">女
+	<br />
+	协议：<input type="text" ng-model="copyright">
+	<input type="submit" ng-disabled="!false">
+	<!-- input表单readonly和disable的局别：readonly可以提交，disable不可以提交 -->
+</div>
+<script type="text/javascript">
+	var m = angular.module('hd', []);
+	m.controller("ctrl", ['$scope', function($scope) {
+		$scope.user = {sex:2};
+	}]);
+</script>
+</body>
+</html>

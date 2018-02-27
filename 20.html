@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>20</title>
+	<script type="text/javascript" src="angular.min.js"></script>
+	<script type="text/javascript" src="jquery-3.3.1.min.js"></script>
+</head>
+<body>
+<div ng-app="hd" ng-controller="ctrl">
+
+	<table border="1" width="500">
+		<tr>
+			<td><input type="checkbox" ng-model="all"><span ng-bind="all?'取消':'全选'">全选</span></td>
+			<td>标题</td>
+			<td>网址</td>
+		</tr>
+		<tr ng-repeat="v in user">
+			<td><input type="checkbox" ng-checked="all"></td>
+			<td>{{v.name}}</td>
+			<td>{{v.url}}</td>
+		</tr>
+	</table>
+</div>
+<script type="text/javascript">
+	var m = angular.module('hd', []);
+	m.controller("ctrl", ['$scope', function($scope) {
+		$scope.user = [
+			{name:"Gexy", url:"123.com"},
+			{name:"QweR", url:"233.com"},
+		];
+	}]);
+</script>
+</body>
+</html>
