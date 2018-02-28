@@ -2,10 +2,11 @@
 <html>
 <head>
     <meta charset="utf-8">
-    <title>28</title>
+    <title>30</title>
     <script type="text/javascript" src="angular.min.js"></script>
     <script type="text/javascript" src="jquery-3.3.1.min.js"></script>
     <link rel="stylesheet" href="bootstrap.min.css">
+    <link rel="stylesheet" href="font-awesome.min.css">
 </head>
 <body>
 <style>
@@ -145,28 +146,28 @@
     m.controller("ctrl", ['$scope', function($scope) {
         $scope.data = {
             "button":[
-            {
-                "type":"click",
-                "name":"今日歌曲",
-                "key":"V1001_TODAY_MUSIC"
-            },
-            {
-                "type":"view",
-                "name":"Bensusan",
-                "url":"bensusan.cn",
-                "sub_button":[
-                    {
-                        "type":"view",
-                        "name":"搜索",
-                        "url":"http://www.soso.com/"
-                    },
-                    {
-                        "type":"click",
-                        "name":"赞一下我们",
-                        "key":"V1001_GOOD"
-                    }
-                ]
-            }]
+                {
+                    "type":"click",
+                    "name":"今日歌曲",
+                    "key":"V1001_TODAY_MUSIC"
+                },
+                {
+                    "type":"view",
+                    "name":"Bensusan",
+                    "url":"bensusan.cn",
+                    "sub_button":[
+                        {
+                            "type":"view",
+                            "name":"搜索",
+                            "url":"http://www.soso.com/"
+                        },
+                        {
+                            "type":"click",
+                            "name":"赞一下我们",
+                            "key":"V1001_GOOD"
+                        }
+                    ]
+                }]
         };
         $scope.addTopButton = function() {
             var menu = {
