@@ -6,7 +6,7 @@
     <script type="text/javascript" src="angular.min.js"></script>
     <script type="text/javascript" src="jquery-3.3.1.min.js"></script>
     <link rel="stylesheet" href="bootstrap.min.css">
-    <link rel="stylesheet" href="font-awesome.min.css">
+    <link rel="stylesheet" href="./css/font-awesome.min.css">
 </head>
 <body>
 <style>
@@ -41,7 +41,22 @@
         padding: 6px;
         text-decoration: none;
     }
+    .top-menu {
+        position: relative;
+    }
+    .top-menu .top-fa {
+        position: absolute;
+        right: -10px;
+        top: -10px;
+        color: #999999;
+        cursor: pointer;
+        display: none;
+    }
+    .top-menu:hover .top-fa {
+        display: block;
+    }
 </style>
+
 <div ng-app="hd" ng-controller="ctrl">
     <form action="" method="post" class="form-horizontal" role="form">
         <div class="container">
@@ -63,7 +78,8 @@
                         </div>
                         <div class="panel-body">
                             <!-- 一级菜单开始 -->
-                            <div class="panel panel-default" ng-repeat="v in data.button">
+                            <div class="panel panel-default top-menu" ng-repeat="v in data.button">
+                                <i class="fa fa-times-circle top-fa fa-2x"></i>
                                 <div class="panel-body">
                                     <div class="form-group">
                                         <label for="" class="col-sm-2 control-label">标题</label>
