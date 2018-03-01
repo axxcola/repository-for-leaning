@@ -7,6 +7,7 @@
       <change beforePath="E:/code/bitbucket/lutes/app/Models/ScheduleComponent.php" afterPath="E:/code/bitbucket/lutes/app/Models/ScheduleComponent.php" />
       <change beforePath="E:/code/bitbucket/lutes/app/Services/ScheduleService.php" afterPath="E:/code/bitbucket/lutes/app/Services/ScheduleService.php" />
       <change beforePath="E:/code/bitbucket/lutes/app/Services/WbsService.php" afterPath="E:/code/bitbucket/lutes/app/Services/WbsService.php" />
+      <change beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -17,14 +18,24 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="ScheduleController.php" pinned="false" current-in-tab="true">
+      <file leaf-file-name="ScheduleController.php" pinned="false" current-in-tab="false">
         <entry file="file://E:/code/bitbucket/lutes/app/Http/Controllers/Schedule/ScheduleController.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-155">
-              <caret line="178" column="5" lean-forward="false" selection-start-line="178" selection-start-column="5" selection-end-line="178" selection-end-column="5" />
+            <state relative-caret-position="648">
+              <caret line="37" column="89" lean-forward="true" selection-start-line="37" selection-start-column="89" selection-end-line="37" selection-end-column="89" />
               <folding>
                 <element signature="e#49#85#0#PHP" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ComponentStatusCode.php" pinned="false" current-in-tab="false">
+        <entry file="file://E:/code/bitbucket/lutes/app/Models/ComponentStatusCode.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="0">
+              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -39,11 +50,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="ScheduleService.php" pinned="false" current-in-tab="false">
+      <file leaf-file-name="ScheduleService.php" pinned="false" current-in-tab="true">
         <entry file="file://E:/code/bitbucket/lutes/app/Services/ScheduleService.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-641">
-              <caret line="29" column="0" lean-forward="true" selection-start-line="29" selection-start-column="0" selection-end-line="29" selection-end-column="0" />
+            <state relative-caret-position="-36">
+              <caret line="72" column="45" lean-forward="true" selection-start-line="72" selection-start-column="45" selection-end-line="72" selection-end-column="45" />
               <folding>
                 <element signature="e#31#64#0#PHP" expanded="true" />
               </folding>
@@ -54,21 +65,11 @@
       <file leaf-file-name="Kernel.php" pinned="false" current-in-tab="false">
         <entry file="file://E:/code/bitbucket/lutes/app/Console/Kernel.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="784">
+            <state relative-caret-position="496">
               <caret line="28" column="51" lean-forward="false" selection-start-line="28" selection-start-column="51" selection-end-line="28" selection-end-column="51" />
               <folding>
                 <element signature="e#31#74#0#PHP" expanded="true" />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="ScheduleComponent.php" pinned="false" current-in-tab="false">
-        <entry file="file://E:/code/bitbucket/lutes/app/Models/ScheduleComponent.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="364">
-              <caret line="13" column="70" lean-forward="false" selection-start-line="13" selection-start-column="70" selection-end-line="13" selection-end-column="70" />
-              <folding />
             </state>
           </provider>
         </entry>
@@ -164,7 +165,6 @@
   <component name="JsFlowSettings">
     <service-enabled>true</service-enabled>
     <exe-path />
-    <annotation-enable>false</annotation-enable>
     <other-services-enabled>true</other-services-enabled>
     <auto-save>true</auto-save>
   </component>
@@ -255,7 +255,7 @@
   </component>
   <component name="PropertiesComponent">
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
-    <property name="settings.editor.selected.configurable" value="Settings.JavaScript" />
+    <property name="settings.editor.selected.configurable" value="reference.settingsdialog.IDE.editor.colors" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="last_opened_file_path" value="E:/code/bitbucket/lutes" />
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
@@ -274,6 +274,12 @@
         </RuleState>
       </list>
     </option>
+  </component>
+  <component name="RunManager">
+    <configuration name="未命名" type="PhpBuiltInWebServerConfigurationType" factoryName="PHP Built-in Web Server" document_root="$PROJECT_DIR$/../code/bitbucket/lutes">
+      <CommandLine workingDirectory="$PROJECT_DIR$/../code/bitbucket/lutes" />
+      <option name="workingDirectory" value="E:\code\bitbucket\lutes" />
+    </configuration>
   </component>
   <component name="ShelveChangesManager" show_recycled="false">
     <option name="remove_strategy" value="false" />
@@ -299,7 +305,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="57211000" />
+    <option name="totallyTimeSpent" value="58440000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
@@ -347,17 +353,12 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="XDebuggerManager">
-    <breakpoint-manager />
+    <breakpoint-manager>
+      <option name="time" value="1" />
+    </breakpoint-manager>
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/IsolateScope.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="392">
-          <caret line="14" column="19" lean-forward="false" selection-start-line="14" selection-start-column="19" selection-end-line="14" selection-end-column="19" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://E:/code/bitbucket/lutes/app/Http/Controllers/WBS/ProjectPhaseController.php" />
     <entry file="file://$PROJECT_DIR$/IsolateScope.js">
       <provider selected="true" editor-type-id="text-editor">
@@ -426,7 +427,6 @@
     <entry file="file://E:/code/bitbucket/lutes/angular/app/components/project-phase/project-phase.component.js" />
     <entry file="file://E:/code/bitbucket/lutes/angular/app/pages/forgot-password/forgot-password.page.html" />
     <entry file="file://E:/code/bitbucket/lutes/app/Http/Controllers/Invitation/ApprovalController.php" />
-    <entry file="file://E:/code/bitbucket/lutes/app/Http/Controllers/Invitation/InvitationController.php" />
     <entry file="file://$PROJECT_DIR$/27.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="533">
@@ -458,16 +458,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://E:/code/bitbucket/lutes/app/Console/Kernel.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="784">
-          <caret line="28" column="51" lean-forward="false" selection-start-line="28" selection-start-column="51" selection-end-line="28" selection-end-column="51" />
-          <folding>
-            <element signature="e#31#74#0#PHP" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://E:/code/bitbucket/lutes/app/Models/InvitationStatus.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -484,21 +474,39 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://E:/code/bitbucket/lutes/app/Models/ScheduleComponent.php">
+    <entry file="file://E:/code/bitbucket/lutes/app/Http/Controllers/Invitation/InvitationController.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="364">
-          <caret line="13" column="70" lean-forward="false" selection-start-line="13" selection-start-column="70" selection-end-line="13" selection-end-column="70" />
+        <state relative-caret-position="-8949">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <element signature="e#51#87#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://E:/code/bitbucket/lutes/app/Http/Controllers/Schedule/ScheduleController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="648">
+          <caret line="37" column="89" lean-forward="true" selection-start-line="37" selection-start-column="89" selection-end-line="37" selection-end-column="89" />
+          <folding>
+            <element signature="e#49#85#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://E:/code/bitbucket/lutes/app/Models/ComponentStatusCode.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://E:/code/bitbucket/lutes/app/Services/ScheduleService.php">
+    <entry file="file://E:/code/bitbucket/lutes/app/Models/ScheduleComponent.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-641">
-          <caret line="29" column="0" lean-forward="true" selection-start-line="29" selection-start-column="0" selection-end-line="29" selection-end-column="0" />
-          <folding>
-            <element signature="e#31#64#0#PHP" expanded="true" />
-          </folding>
+        <state relative-caret-position="420">
+          <caret line="15" column="31" lean-forward="false" selection-start-line="15" selection-start-column="31" selection-end-line="15" selection-end-column="31" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -510,12 +518,22 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://E:/code/bitbucket/lutes/app/Http/Controllers/Schedule/ScheduleController.php">
+    <entry file="file://E:/code/bitbucket/lutes/app/Console/Kernel.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-155">
-          <caret line="178" column="5" lean-forward="false" selection-start-line="178" selection-start-column="5" selection-end-line="178" selection-end-column="5" />
+        <state relative-caret-position="496">
+          <caret line="28" column="51" lean-forward="false" selection-start-line="28" selection-start-column="51" selection-end-line="28" selection-end-column="51" />
           <folding>
-            <element signature="e#49#85#0#PHP" expanded="true" />
+            <element signature="e#31#74#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://E:/code/bitbucket/lutes/app/Services/ScheduleService.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-36">
+          <caret line="72" column="45" lean-forward="true" selection-start-line="72" selection-start-column="45" selection-end-line="72" selection-end-column="45" />
+          <folding>
+            <element signature="e#31#64#0#PHP" expanded="true" />
           </folding>
         </state>
       </provider>
