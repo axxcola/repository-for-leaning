@@ -2,7 +2,7 @@
 <html>
 <head>
     <meta charset="utf-8">
-    <title>40</title>
+    <title>43</title>
     <script type="text/javascript" src="angular.min.js"></script>
     <script type="text/javascript" src="jquery-3.3.1.min.js"></script>
     <script type="text/javascript" src="underscore-min.js"></script>
@@ -12,16 +12,14 @@
 <body>
 
 <div ng-app="hd" ng-controller="ctrl">
+  搜索： <input type="text" ng-model="search">
   <table border="3" width="600">
       <tr>
-          <td ng-click="orderBy('id')">编号
-            <span ng-if="status.id">降序</span>
-            <span ng-if="!status.id">升序</span>
-          </td>
-          <td ng-click="orderBy('click')">点击数</td>
-          <td ng-click="orderBy('title')">标题</td>
+          <td>编号</td>
+          <td>点击数</td>
+          <td>标题</td>
       </tr>
-      <tr ng-repeat="(k,v) in data">
+      <tr ng-repeat="(k,v) in lists">
           <td>{{v.id}}</td>
           <td>{{v.click}}</td>
           <td>{{v.title}}</td>
@@ -36,17 +34,10 @@
         {id:2, click:200, title:'Javascript'},
         {id:3, click:300, title:'Python'},
       ];
-      //记录排序的状态
-      $scope.status = {id:false, click:false, title:false};
-      $scope.orderBy = function(field) {
-        // if(arguments.callee[field]==undefined) {
-        //     arguments.callee[field] = false;
-        // }
-        // arguments.callee[field] = !arguments.callee[field];
-        $scope.status[field] = !$scope.status[field];
-        // $scope.data = $filter('orderBy')($scope.data, field, arguments.callee[field]);
-        $scope.data = $filter('orderBy')($scope.data, field, $scope.status[field]);
-      }
+      $scope.lists = $scope.data;
+      $scope.$watch('search', function(n,o) {
+            $scope.lists = $filter('filter')($scope.data, n);
+      });
     }]);
 </script>
 </body>
