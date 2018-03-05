@@ -2,7 +2,7 @@
 <html>
 <head>
     <meta charset="utf-8">
-    <title>50</title>
+    <title>54</title>
     <script type="text/javascript" src="angular.min.js"></script>
     <script type="text/javascript" src="jquery-3.3.1.min.js"></script>
     <script type="text/javascript" src="underscore-min.js"></script>
@@ -11,19 +11,21 @@
 </head>
 <body>
 
-<div ng-app="hd">
-  <div axxcola>被替换内容</div>
+<div ng-app="hd" ng-controller="ctrl">
+  <h1 axxcola></h1>
 </div>
 <script type="text/javascript">
     var m = angular.module('hd', []);
-    m.directive("axxcola",[function() {
+    m.directive("axxcola", [function() {
       return {
-        restrict: 'AEC',
-        replace: true,  //templateUrl必须要有标签包裹
-        template: '<h1><div ng-transclude=""></div>axxcola强无敌</h1>',
-        transclude: true,
-        // templateUrl:引入外部模板
+        restrict: "AEC",
+        template: '<span style="color:{{color}}">axxcola</span>',
+        scope: {color:'@color'}
       };
+    }]);
+    m.controller('ctrl', ['$scope', function($scope) {
+        $scope.name="Gexy";
+        $scope.color="green";
     }]);
 </script>
 </body>
