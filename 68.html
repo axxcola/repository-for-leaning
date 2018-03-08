@@ -17,13 +17,9 @@
 <script type="text/javascript">
     var m = angular.module('hd', []);
     m.controller('ctrl', ['$scope','$http', function($scope, $http) {
-        $http({
-            method:'get',
-            url:'66.php',
-            cache:true  //请求成功一次后，下面的http请求（如果有）就不再请求，下面的数据就用这次请求的缓存
-        }).then(function(response) {
-            console.log('success');
-        },function(response) {
+        $http.get('68.php',{cache:true}).then(function(response){
+            console.log(response);
+        },function(response){
             console.log('fail');
         });
     }]);
