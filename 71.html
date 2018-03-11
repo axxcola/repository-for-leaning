@@ -2,7 +2,7 @@
 <html>
 <head>
     <meta charset="utf-8">
-    <title>70</title>
+    <title>71</title>
     <script type="text/javascript" src="angular.min.js"></script>
     <script type="text/javascript" src="jquery-3.3.1.min.js"></script>
     <script type="text/javascript" src="underscore-min.js"></script>
@@ -12,32 +12,26 @@
 <body>
 
 <div ng-app="hd">
-    <div ng-controller="ctrl">{{data}}</div>
+    <div ng-controller="ctrl1">{{data}}</div>
+    <div ng-controller="ctrl2">{{data}}</div>
 </div>
 <script type="text/javascript">
     var m = angular.module('hd', []);
     //自定义服务：使用回调函数方式返回数据
     m.factory('videoServer', ['$http',function($http) {
-        return {
-            get:function(callback) {
-                $http({url:'68.php'}).then(function(response) {
-                    callback(response);
-                })
-            },
-
+        var obj = {
             all:function() {
                 //返回一个(permission ?)对象
                 return $http({url:'68.php'});
             }
         };
+        return obj;
     }]);
-    m.controller('ctrl', ['$scope','$http','videoServer', function($scope, $http, videoServer) {
-        // videoServer.get(function(response) {
-        //     $scope.data = response.data;
-        // });
-        videoServer.all().then(function(response) {
-            $scope.data = 123;
-        });
+    m.controller('ctrl1', ['$scope','$http','videoServer', function($scope, $http, videoServer) {
+        $scope.data = videoServer.all();
+    }]);
+    m.controller('ctrl2', ['$scope','$http','videoServer', function($scope, $http, videoServer) {
+        
     }]);
 </script>
 </body>
