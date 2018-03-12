@@ -1,5 +1,19 @@
 {
+  "name": "respository-for-leaning",
+  "version": "0.0.1",
+  "description": "opps",
+  "homepage": "",
+  "respository": {
+	"type": "git",
+	"url": "https://github.com/axxcola/repository-for-leaning.git"
+  },
+  "author": {
+	"name": "axxcola",
+	"email": "605363537@qq.com"
+  },
+  "license": "MIT",
   "devDependencies": {
-    "gulp": "^3.9.1"
+    "gulp": "^3.9.1",
+	"gulp-less": "^3.0.0"
   }
 }
