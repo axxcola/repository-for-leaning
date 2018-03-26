@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>template v-if</title>
+<link rel="stylesheet" type="text/css" href="css/style.css">
+<script type="text/javascript" src="js/vue.js"></script>
+<script type="text/javascript">
+window.onload = function() {
+    var dataList = {
+        innerText: '大家好，欢迎来到麦子学院！',
+        display: true
+    };
+    new Vue({
+        el: 'section',
+        data: dataList
+    });
+
+    setTimeout(function() {
+    	dataList.display = false;
+    }, 5000);
+};
+</script>
+</head>
+<body>
+<section>
+    <template v-if="display">
+        <p>一个简单的template v-if案例</p>
+        <div class="head face">{{ innerText }}</div>
+        <p>怎么样？是不是很简单？</p>
+    </template>
+</section>
+</body>
+</html>

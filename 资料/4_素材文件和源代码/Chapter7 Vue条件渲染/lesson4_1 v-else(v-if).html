@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>v-else(v-if)</title>
+<link rel="stylesheet" type="text/css" href="css/style.css">
+<script type="text/javascript" src="js/vue.js"></script>
+<script type="text/javascript">
+window.onload = function() {
+    var dataList = {
+        innerText: '大家好，欢迎来到麦子学院！',
+        display: true
+    };
+    new Vue({
+        el: 'section',
+        data: dataList
+    });
+
+    setTimeout(function() {
+    	dataList.display = false;
+    }, 5000);
+};
+</script>
+</head>
+<body>
+<section>
+    <div v-if="display" class="head face">{{ innerText }}</div>
+    <div v-else class="head msg">{{ innerText }}</div>
+</section>
+</body>
+</html>

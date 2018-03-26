@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>object v-for</title>
+<link rel="stylesheet" type="text/css" href="css/style.css">
+<script type="text/javascript" src="js/vue.js"></script>
+<script type="text/javascript">
+window.onload = function() {
+    var dataList = {
+        innerText: {
+            Firstname: 'Edogawa',
+            Lastname: 'Conan',
+            Sex: 'Boy',
+            Age: 29
+        }
+    };
+    new Vue({
+        el: 'div',
+        data: dataList
+    });
+};
+</script>
+</head>
+<body>
+<div class="head face">
+    <span v-for="value in innerText">{{ $key }}:{{ value }}</span>
+</div>
+</body>
+</html>
