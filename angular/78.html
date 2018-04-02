@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>78</title>
+    <script type="text/javascript" src="angular.min.js"></script>
+    <script type="text/javascript" src="jquery-3.3.1.min.js"></script>
+    <script type="text/javascript" src="underscore-min.js"></script>
+    <!-- <script type="text/javascript" src="angular-route.js"></script> -->
+    <script type="text/javascript" src="angular-ui-router.js"></script>
+    <link rel="stylesheet" href="bootstrap.min.css">
+    <link rel="stylesheet" href="./css/font-awesome.min.css">
+</head>
+<body>
+
+<div ng-app="hd">
+    <a href="#/home">HOME</a>
+    <a href="#/list">LIST</a>
+    <a href="#/view">VIEW</a>
+    <hr>
+    <a ui-sref="home">HOME_SREF</a>
+    <a ui-sref="list">LIST_SREF</a>
+    <a ui-sref="view">VIEW_SREF</a>
+    <a ui-sref="default">DEFAULT</a>
+    <div ui-view>测试</div>
+</div>
+<script type="text/javascript">
+    var m = angular.module('hd', ['ui.router']);
+    m.config(['$stateProvider', '$urlRouterProvider', function($stateProvider, $urlRouterProvider){
+        //默认路由
+        $urlRouterProvider.otherwise('');
+        //定义路由规则
+        $stateProvider.state('default', {
+            url : "/axxcola",
+            templateUrl: "/77need.html",
+            controller: 'ctrl'
+        }).state('home', {
+            url : "/home",
+            template: "<h1>home</h1>"
+        }).state('list', {
+            url : "/list",
+            template: "<h1>list</h1>"
+        }).state('view', {
+            url : "/view",
+            template: "<h1>view</h1>"
+        });
+    }]);
+    m.controller('ctrl', ['$scope', '$state', function($scope, $state) {
+        $scope.go = function(url) {
+            $state.go(url);
+        }
+    }]);
+</script>
+</body>
+</html>

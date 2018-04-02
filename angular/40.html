@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>40</title>
+    <script type="text/javascript" src="angular.min.js"></script>
+    <script type="text/javascript" src="jquery-3.3.1.min.js"></script>
+    <script type="text/javascript" src="underscore-min.js"></script>
+    <link rel="stylesheet" href="bootstrap.min.css">
+    <link rel="stylesheet" href="./css/font-awesome.min.css">
+</head>
+<body>
+
+<div ng-app="hd" ng-controller="ctrl">
+  <table border="3" width="600">
+      <tr>
+          <td ng-click="orderBy('id')">编号
+            <span ng-if="status.id">降序</span>
+            <span ng-if="!status.id">升序</span>
+          </td>
+          <td ng-click="orderBy('click')">点击数</td>
+          <td ng-click="orderBy('title')">标题</td>
+      </tr>
+      <tr ng-repeat="(k,v) in data">
+          <td>{{v.id}}</td>
+          <td>{{v.click}}</td>
+          <td>{{v.title}}</td>
+      </tr>
+  </table>
+</div>
+<script type="text/javascript">
+    var m = angular.module('hd', []);
+    m.controller("ctrl", ['$scope', '$filter', function($scope, $filter) {
+      $scope.data = [
+        {id:1, click:100, title:'PHP'},
+        {id:2, click:200, title:'Javascript'},
+        {id:3, click:300, title:'Python'},
+      ];
+      //记录排序的状态
+      $scope.status = {id:false, click:false, title:false};
+      $scope.orderBy = function(field) {
+        // if(arguments.callee[field]==undefined) {
+        //     arguments.callee[field] = false;
+        // }
+        // arguments.callee[field] = !arguments.callee[field];
+        $scope.status[field] = !$scope.status[field];
+        // $scope.data = $filter('orderBy')($scope.data, field, arguments.callee[field]);
+        $scope.data = $filter('orderBy')($scope.data, field, $scope.status[field]);
+      }
+    }]);
+</script>
+</body>
+</html>

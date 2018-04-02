@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>66</title>
+    <script type="text/javascript" src="angular.min.js"></script>
+    <script type="text/javascript" src="jquery-3.3.1.min.js"></script>
+    <script type="text/javascript" src="underscore-min.js"></script>
+    <link rel="stylesheet" href="bootstrap.min.css">
+    <link rel="stylesheet" href="./css/font-awesome.min.css">
+</head>
+<body>
+
+<div ng-app="hd">
+    <div ng-controller="ctrl"></div>
+</div>
+<script type="text/javascript">
+    var m = angular.module('hd', []);
+    m.controller('ctrl', ['$scope','$http', function($scope, $http) {
+        $http({
+            method:'get',
+            url:'66.php'
+        }).then(function(response) {
+            console.log('success');
+        },function(response) {
+            console.log('fail');
+        });
+    }]);
+</script>
+</body>
+</html>

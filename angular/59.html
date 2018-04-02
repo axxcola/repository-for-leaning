@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>59</title>
+    <script type="text/javascript" src="angular.min.js"></script>
+    <script type="text/javascript" src="jquery-3.3.1.min.js"></script>
+    <script type="text/javascript" src="underscore-min.js"></script>
+    <link rel="stylesheet" href="bootstrap.min.css">
+    <link rel="stylesheet" href="./css/font-awesome.min.css">
+</head>
+<body>
+
+<div ng-app="hd">
+    <axxcola></axxcola>
+</div>
+<script type="text/javascript">
+    var m = angular.module('hd', []);
+    m.directive("axxcola", [function() {
+      return {
+        restrict: "AEC",
+        templateUrl: '59need.html',
+        scope:{},
+        link:function(scope,elem,attr) {
+            $(elem).delegate('a', 'click', function() {
+                $('a').removeClass('active');
+                $(this).addClass('active');
+                //查找a元素出现的位置
+                var index = $(this).index();
+                $(elem).find('div.lists').hide();
+                $(elem).find('div.lists').eq(index-1).show()
+            });
+        },
+        controller:['$scope', function($scope){
+            $scope.data = [
+                {id:1, title:'呀哈哈',data:[
+                    {id:1, title:'zelda'},
+                    {id:2, title:'zelda2'},
+                ]},
+                 {id:2, title:'CMS',data:[
+                    {id:1, title:'HDCMS'},
+                    {id:2, title:'AXXCMS'},
+                ]}
+            ];
+        }]
+      };
+    }]);
+</script>
+</body>
+</html>

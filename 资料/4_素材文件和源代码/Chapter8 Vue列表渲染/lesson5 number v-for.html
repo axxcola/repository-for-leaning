@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>number v-for</title>
+<link rel="stylesheet" type="text/css" href="css/style.css">
+<script type="text/javascript" src="js/vue.js"></script>
+<script type="text/javascript">
+window.onload = function() {
+    new Vue({
+        el: 'div'
+    });
+};
+</script>
+</head>
+<body>
+<div class="head face">
+    <span v-for="number in 10">{{ number }}</span>
+</div>
+</body>
+</html>

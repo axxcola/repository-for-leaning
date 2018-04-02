@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>58</title>
+    <script type="text/javascript" src="angular.min.js"></script>
+    <script type="text/javascript" src="jquery-3.3.1.min.js"></script>
+    <script type="text/javascript" src="underscore-min.js"></script>
+    <link rel="stylesheet" href="bootstrap.min.css">
+    <link rel="stylesheet" href="./css/font-awesome.min.css">
+</head>
+<body>
+
+<div ng-app="hd">
+    <axxcola bgcolor="red" fontcolor="#fff" title="axx"></axxcola>
+    <axxcola bgcolor="green" fontcolor="#fff" title="axx"></axxcola>
+    <axxcola bgcolor="yellow" fontcolor="#fff" title="axx"></axxcola>
+    <axxcola bgcolor="purple" fontcolor="#fff" title="axx"></axxcola>
+</div>
+<script type="text/javascript">
+    var m = angular.module('hd', []);
+    m.directive("axxcola", [function() {
+      return {
+        restrict: "AEC",
+        scope:{
+            title:"@"
+        },
+        link:function(scope,elem,attr) {
+            console.log(attr);
+            $(elem).css({backgroundColor:attr['bgcolor'],color:attr['fontcolor']}).html(scope.title);
+        }
+      };
+    }]);
+</script>
+</body>
+</html>

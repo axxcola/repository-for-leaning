@@ -1,0 +1,11 @@
+h1 { margin: 10px; }
+p { margin: 0; }
+
+.head { font-family: 'Microsoft Yahei'; font-size: 48px; font-weight: bold; position: fixed; top: 0; right: 0; bottom: 0; left: 0; width: 800px; margin: auto; border: 5px solid black; }
+.head:before,
+.head:after { position: absolute; display: block; margin: auto; content: ''; border: 5px solid black; border-radius: 50%; }
+.head > span { display: block; }
+
+.face { height: 600px; }
+.face:before { top: 0; right: -200px; bottom: 0; width: 100px; height: 100px; }
+.face:after { top: 0; bottom: 0; left: -200px; width: 100px; height: 100px; }

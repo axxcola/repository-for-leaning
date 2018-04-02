@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>插入HTML</title>
+<link rel="stylesheet" type="text/css" href="css/style.css">
+<script type="text/javascript" src="js/vue.js"></script>
+<script type="text/javascript" src="js/script.js"></script>
+</head>
+<body>
+<div>
+	是否显示：
+	<input type="radio" id="true" value="hello" v-model="display">
+	<label for="true">显示</label>&nbsp;&nbsp;
+	<input type="radio" id="false" value="" v-model="display">
+	<label for="false">隐藏</label>
+	<div class="face" v-if="display">{{{ innerHTML }}}</div>
+</div>
+</body>
+</html>

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>v-for</title>
+<link rel="stylesheet" type="text/css" href="css/style.css">
+<script type="text/javascript" src="js/vue.js"></script>
+<script type="text/javascript">
+window.onload = function() {
+    var dataList = {
+        innerText: [ '大家好', '欢迎来到麦子学院！' ]
+    };
+    new Vue({
+        el: 'div',
+        data: dataList
+    });
+};
+</script>
+</head>
+<body>
+<div class="head face">
+    <span v-for="text in innerText">{{ text }}</span>
+</div>
+</body>
+</html>

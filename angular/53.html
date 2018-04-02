@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>53</title>
+    <script type="text/javascript" src="angular.min.js"></script>
+    <script type="text/javascript" src="jquery-3.3.1.min.js"></script>
+    <script type="text/javascript" src="underscore-min.js"></script>
+    <link rel="stylesheet" href="bootstrap.min.css">
+    <link rel="stylesheet" href="./css/font-awesome.min.css">
+</head>
+<body>
+
+<div ng-app="hd">
+  <div ng-controller="ctrl">
+    {{name}}
+    <hr>
+    <axxcola></axxcola>
+    <hr>
+    <axxcola></axxcola>
+  </div>
+</div>
+<script type="text/javascript">
+    var m = angular.module('hd', []);
+    m.directive("axxcola", [function() {
+      return {
+        restrict: "AEC",
+        template: '{{name}} <input type="text" ng-model="name">',
+        scope: true //独立作用域
+      };
+    }]);
+    m.controller('ctrl', ['$scope', function($scope) {
+        $scope.name="Gexy";
+    }]);
+</script>
+</body>
+</html>
