@@ -44,6 +44,7 @@ export default {
 </script>
 
 <style lang="stylus" rel="stylesheet/stylus">
+@import "./common/styles/base";
 #tabs
   .tab
     display: flex
