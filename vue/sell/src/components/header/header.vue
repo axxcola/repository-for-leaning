@@ -17,7 +17,7 @@
     			<span class="text">{{seller.supports[0].description}}</span>
     		</div>
     	</div>
-        <div class="support-count" v-if="seller.supports">
+        <div class="support-count" v-if="seller.supports" @click="showDetail">
             <span class="count">{{seller.supports.length}}个</span>
             <i class="icon-keyboard_arrow_right"></i>
         </div>
@@ -29,6 +29,16 @@
     <div class="background">
         <img v-bind:src="seller.avatar" width="100%" height="100%">
     </div>
+    <div class="detail" v-show="detailShow">
+        <div class="detail-wrapper clearfix">
+            <div class="detail-main">
+                
+            </div>
+        </div>
+        <div class="detail-close" @click="closeDetail">
+            <i class="icon-close">×</i>
+        </div>
+    </div>
   </div>
 </template>
 
@@ -39,6 +49,19 @@ export default {
 			type: Object
 		}
 	},
+    data() {
+        return {
+            detailShow: false
+        };
+    },
+    methods: {
+        showDetail() {
+            this.detailShow = true;
+        },
+        closeDetail() {
+            this.detailShow = false;
+        }
+    },
     created() {
         this.classMap = ['decrease', 'discount', 'special', 'invoice', 'guarantee'];
     }
@@ -49,6 +72,7 @@ export default {
 @import "../../common/styles/mixin";
 .header
     position: relative
+    overflow: hidden
     color: #fff
     background: rgba(7, 17, 27, 0.5)
     .content-wrapper
@@ -130,7 +154,7 @@ export default {
         .bulletin-title
             display: inline-block
             vertical-align: top
-            margin-top: 7px
+            margin-top: 8px
             width: 22px
             height: 12px
             bg-image('bulletin')
@@ -153,4 +177,25 @@ export default {
         height: 100%
         z-index: -1
         filter: blur(10px)
+    .detail
+        position: fixed
+        z-index: 100
+        top: 0
+        left: 0
+        width: 100%
+        height: 100%
+        overflow: auto
+        background: rgba(7, 17, 27, 0.8)
+        .detail-wrapper
+            min-height: 100%
+            .detail-main
+                margin-top: 64px
+                padding-bottom: 64px
+        .detail-close
+            position: relative
+            width: 32px
+            height: 32px
+            margin: -64px auto 0 auto
+            clear: both
+            font-size: 32px
 </style>
