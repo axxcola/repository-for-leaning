@@ -27,7 +27,6 @@ export default {
 			if(!event._constructed) {
 				return false;
 			}
-			console.log(this.food);
 			if(!this.food.count) {
 				//this.food原本没有count这个属性，强行赋值的话, v-show无法监测到
 				// this.food.count = 1;

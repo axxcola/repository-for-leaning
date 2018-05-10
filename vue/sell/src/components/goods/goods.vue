@@ -246,6 +246,7 @@ export default {
 						color: rgb(147, 153, 159)
 				.cartcontrol-wrapper
 					position: absolute
+					margin-top: -30px
 					right: 0
 					border: 12px
 </style>
