@@ -37,7 +37,7 @@ export default {
 		},
 		decreaseCart: function (event) {
 			if(!event._constructed) {
-				return false;
+				return;
 			}
 			if(this.food.count) {
 				this.food.count--;
