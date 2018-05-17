@@ -2,7 +2,7 @@
 	<div class="food" v-show="showFlag">
 		<div class="food-content">
 			<div class="image-header">
-				<img :scr="food.image">
+				<img :src="food.image">
 			</div>
 		</div>
 	</div>
